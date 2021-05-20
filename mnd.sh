@@ -19,6 +19,7 @@ rnd_ip_block ()
     c=${array[$RANDOM%16]}${array[$RANDOM%16]}${array[$RANDOM%16]}${array[$RANDOM%16]}
     d=${array[$RANDOM%16]}${array[$RANDOM%16]}${array[$RANDOM%16]}${array[$RANDOM%16]}
     echo $network:$a:$b:$c:$d
+    echo /sbin/ip -6 addr add $network:$a:$b:$c:$d/64 dev eth0 >> /root/ip.list2.sh
 }
 
 #echo "$MAXCOUNT СЃР»СѓС‡Р°Р№РЅС‹С… IPv6:"
